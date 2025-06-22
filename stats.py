@@ -14,3 +14,14 @@ def count_chars(output):
         else:
             char_dict[char] = 1 
     return char_dict
+
+def sort_on(char_dict):
+    return char_dict["num"]
+
+def sorted_characters(char_counts):
+    characters = []
+    for char, num in char_counts.items():
+        characters.append({"char": char, "num": num})
+
+    characters.sort(reverse=True, key=sort_on)
+    return characters
